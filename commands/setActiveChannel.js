@@ -5,7 +5,7 @@ const colors = require('../config/colors.json')
 
 
 exports.run = (bot, message) => {
-  const filepath = path.normalize(`../data/${message.guild.id}.json`)
+  const filepath = path.normalize(`./data/${message.guild.id}.json`)
   let settings = JSON.parse(fs.readFileSync(filepath, 'utf-8'))
   const channel = message.channel
   settings.targetChannelID = channel.id
