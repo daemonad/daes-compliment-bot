@@ -4,7 +4,7 @@ const handleError = require('../handlers/errorHandler.js')
 const colors = require('../config/colors.json')
 
 exports.run = (bot, message, [value]) => {
-  const filepath = path.normalize(`${__dirname}/../data/${message.guild.id}.json`)
+  const filepath = path.normalize(`../data/${message.guild.id}.json`)
   if (typeof (value) === 'object' && value.length > 1) {
     return handleError(bot, message, `You cannot have spaces in the prefix`, '')
   }

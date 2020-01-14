@@ -10,7 +10,7 @@ const bot = new Discord.Client({
 })
 
 bot.on('message', message => {
-  let folderpath = `${__dirname}/data/`
+  let folderpath = './data/'
   let filename = `${message.guild.id}.json`
   let filepath = folderpath + filename
 
